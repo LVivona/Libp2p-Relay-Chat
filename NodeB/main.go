@@ -9,7 +9,6 @@ import (
 	"os"
 
 	"github.com/libp2p/go-libp2p"
-	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 )
@@ -63,12 +62,10 @@ func writeData(rw *bufio.ReadWriter) {
 			return
 		}
 
-		rw.WriteString(fmt.Sprintf("%s : %s\n", h3.ID().ShortString(), sendData))
+		rw.WriteString(fmt.Sprintf("%s\n", sendData))
 		rw.Flush()
 	}
 }
-
-var h3 host.Host
 
 func main() {
 	flag.Parse()
