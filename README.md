@@ -32,4 +32,4 @@ console:
 ```
 
 ### 4. Start Chatting
-enjoy!!! 🐵
+enjoy!!!
